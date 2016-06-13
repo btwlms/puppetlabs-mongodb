@@ -10,7 +10,8 @@ class mongodb::repo (
         $location = $repo_location
         $description = 'MongoDB Custom Repository'
       } elsif $mongodb::globals::use_enterprise_repo == true {
-        $location = 'https://repo.mongodb.com/yum/redhat/$releasever/mongodb-enterprise/stable/$basearch/'
+#      $location = 'https://repo.mongodb.com/yum/redhat/$releasever/mongodb-enterprise/stable/$basearch/'
+      $location = 'http://repo.mongodb.org/yum/redhat/6/mongodb-org/3.0/x86_64/'
         $description = 'MongoDB Enterprise Repository'
       }
       elsif (versioncmp($version, '3.0.0') >= 0) {
